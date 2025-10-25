@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Login API Call</title>
+</head>
+<body>
+  <h2>Login Example</h2>
+  <button id="loginBtn">Login</button>
+
+  <pre id="result"></pre>
+
+  <script>
+    document.getElementById("loginBtn").addEventListener("click", async () => {
+      const endpoint = "https://engrossingly-chemosynthetic-stephany.ngrok-free.dev/api/v1/auth/login";
+      const payload = {
+        email: "admin@admin.com",
+        password: "1234567"
+      };
+
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringif
